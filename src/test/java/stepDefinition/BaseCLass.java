@@ -3,22 +3,40 @@ import Pages.PageFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 
 public class BaseCLass {
     static WebDriver driver;
     public PageFactory pageFactory;
+    @Parameters("browserName")
+    @BeforeClass
+    public void setUpDriver(String browserName) {
+        if (browserName.equalsIgnoreCase("Chrome")) {
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.navigate().to("https://demo.nopcommerce.com/");
+            driver.manage().window().maximize();
+            pageFactory = new PageFactory(driver);
+            
+        } else if (browserName.equalsIgnoreCase("FireFox")) {
 
-    public void setUpDriver() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.navigate().to("https://demo.nopcommerce.com/");
-        pageFactory = new PageFactory(driver);
+            WebDriverManager.firefoxdriver().setup();
+
+            driver = new FirefoxDriver();
+
+            driver.navigate().to("https://admin-demo.nopcommerce.com/");
+
+            driver.manage().window().maximize();
+
+            pageFactory = new PageFactory(driver);
+
+        }
     }
-
     public void close() {
-        driver.close();
+        driver.quit();
     }
 }
 

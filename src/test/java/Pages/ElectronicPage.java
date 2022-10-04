@@ -1,11 +1,16 @@
 package Pages;
 
-import net.jodah.failsafe.internal.util.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import java.util.List;
 
 public class ElectronicPage {
     WebDriver driver;
+
+    int number;
     By WelcomePage       =By.xpath("//h2[contains(text(),'Welcome to our store')]");
     By ComputerHyperlink = By.xpath("//a[text()='Computers ']");
     By Notebook          = By.xpath("//a[text()=' Notebooks ']");
@@ -21,12 +26,15 @@ public class ElectronicPage {
     }
 
     public void ElectronicsUser() {
-        String actual = driver.findElement(WelcomePage).getText();
-        Assert.isTrue(actual.equals("Welcome to our store"), "Expected result does not match with actual result");
+       // String actual = driver.findElement(WelcomePage).getText();
+       // Assert.isTrue(actual.equals("Welcome to our store"), "Expected result does not match with actual result");
     }
     public void ElectronicMethod2() {
         driver.findElement(ComputerHyperlink).click();
         driver.findElement(Notebook).click();
+        List<WebElement> objectDetails = driver.findElements(By.xpath("//div[@class='product-item']"));
+        number = objectDetails.size();
+        Assert.assertEquals(number,6);
         driver.findElement(Product).click();
     }
     public void Electonicmethod3() {

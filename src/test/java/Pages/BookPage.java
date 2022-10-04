@@ -2,6 +2,10 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+
 public class BookPage {
     WebDriver driver;
     By Booklink = By.xpath("(//a[contains(text(),'Books')])[1]");
@@ -37,6 +41,7 @@ public class BookPage {
     }
 
     public void BookMethod4() {
+        WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(9));
         driver.findElement(Checkout).click();
         driver.findElement(Register).click();
         driver.findElement(Femalebutton).click();
