@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Stepdefinition2 extends BaseCLass {
     @Given("User is on the Home Page")
     public void user_is_on_the_home_page() throws IOException {
-       setUpDriver();
+       setUpDriver("firefox");
        pageFactory.getElectronicsUser().ElectronicsUser();
     }
     @When("click on electronics")

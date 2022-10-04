@@ -5,7 +5,7 @@ import io.cucumber.java.en.When;
 public class Stepdefinition3 extends BaseCLass {
     @When("click on Books")
     public void click_on_books() {
-        setUpDriver();
+        setUpDriver("Chrome");
         pageFactory.getBook().BookUser();
     }
 

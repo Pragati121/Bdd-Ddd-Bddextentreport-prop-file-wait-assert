@@ -20,7 +20,7 @@ public class BaseCLass {
             driver.navigate().to("https://demo.nopcommerce.com/");
             driver.manage().window().maximize();
             pageFactory = new PageFactory(driver);
-            
+
         } else if (browserName.equalsIgnoreCase("FireFox")) {
 
             WebDriverManager.firefoxdriver().setup();

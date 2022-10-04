@@ -10,8 +10,9 @@ public class Stepdefinition extends BaseCLass {
 
         @Given("User is on Home Page")
         public void userIsOnHomePage() {
-                setUpDriver();
+                setUpDriver("Chrome");
         }
+
         @When("click on Register")
         public void clickOnRegister() throws IOException {
                 pageFactory.getHomePage().HomeUser();
