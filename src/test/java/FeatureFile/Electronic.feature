@@ -1,7 +1,7 @@
 Feature: Login Action
-  Scenario:Add Eletronics items
-    Given User is on the Home Page
+  Scenario:Add Electronics items
+    Given User is in Home Page
     When  click on electronics
     And   add product
     And   go to shopping cart page
-    And   click on checkout
+    And   click on checkout and add user details

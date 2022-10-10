@@ -13,7 +13,6 @@ import java.io.IOException;
 
 public class HomePage extends BaseCLass {
     WebDriver driver;
-
     By Register=By.xpath("//a[contains(text(),'Register')]");
     By Male=By.xpath("//input[@name='Gender'][1]");
     By Firstname=By.xpath("//input[@name='FirstName']");

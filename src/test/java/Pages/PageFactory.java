@@ -3,14 +3,9 @@ import org.openqa.selenium.WebDriver;
 
 public class PageFactory
 {
-   private HomePage Home;
-  private HomePage Homemethod12;
-    private ElectronicPage Electronic;
-    private ElectronicPage Electronics23;
-
-    private ElectronicPage electronics;
-    private ElectronicPage electronicsUser;
-    private BookPage Book;
+   private HomePage HomeMethod;
+    private ElectronicPage ElectronicMethod;
+    private BookPage BookMethod;
     WebDriver driver;
 
     public PageFactory(WebDriver driver)
@@ -19,46 +14,22 @@ public class PageFactory
     }
 
    public HomePage getHomePage() {
-        if (Home == null) {
-           Home = new HomePage(driver);
+        if (HomeMethod == null) {
+           HomeMethod = new HomePage(driver);
        }
-       return Home;
-    }
-   public HomePage getHomemethod12() {
-        if (Homemethod12 == null) {
-          Homemethod12 = new HomePage(driver);
-       }
-        return Homemethod12;
+       return HomeMethod;
     }
     public ElectronicPage getElectronic() {
-        if (Electronic == null) {
-            Electronic= new ElectronicPage(driver);
+        if (ElectronicMethod == null) {
+            ElectronicMethod= new ElectronicPage(driver);
         }
-        return Electronic;
-    }
-    public ElectronicPage getElectronic23() {
-        if (Electronics23 == null) {
-            Electronics23= new ElectronicPage(driver);
-        }
-        return Electronics23;
-    }
-    public ElectronicPage getelectronics() {
-        if (electronics == null) {
-            electronics= new ElectronicPage(driver);
-        }
-        return electronics;
-    }
-    public ElectronicPage getElectronicsUser() {
-        if (electronicsUser == null) {
-            electronicsUser= new ElectronicPage(driver);
-        }
-        return electronicsUser;
+        return ElectronicMethod;
     }
     public BookPage getBook() {
-        if (Book == null) {
-            Book= new BookPage(driver);
+        if (BookMethod == null) {
+            BookMethod= new BookPage(driver);
         }
-        return Book;
+        return BookMethod;
     }
 }
 

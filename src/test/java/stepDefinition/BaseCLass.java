@@ -1,4 +1,5 @@
 package stepDefinition;
+
 import Pages.PageFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -21,22 +22,14 @@ public class BaseCLass {
             driver.manage().window().maximize();
             pageFactory = new PageFactory(driver);
 
-        } else if (browserName.equalsIgnoreCase("FireFox")) {
-
-            WebDriverManager.firefoxdriver().setup();
-
-            driver = new FirefoxDriver();
-
-            driver.navigate().to("https://admin-demo.nopcommerce.com/");
-
-            driver.manage().window().maximize();
-
-            pageFactory = new PageFactory(driver);
-
         }
-    }
-    public void close() {
-        driver.quit();
+        else if (browserName.equalsIgnoreCase("FireFox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+            driver.navigate().to("https://demo.nopcommerce.com/");
+            driver.manage().window().maximize();
+            pageFactory = new PageFactory(driver);
+        }
     }
 }
 
