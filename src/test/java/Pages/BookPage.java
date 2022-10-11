@@ -24,9 +24,9 @@ public class BookPage {
     By EmailTextbox         = By.xpath("//input[@name='Email']");
     By AddressTextbox       = By.xpath("//input[@name='Company']");
     By PasswordText         = By.xpath("//input[@name='Password']");
-    By ConfirmPasswordTextBox = By.xpath("//input[@name='ConfirmPassword']");
-    By RegisterButon          = By.xpath("//button[@name='register-button']");
-    By ContinueButton         = By.xpath("//a[contains(@class,'button-1')]");
+    By ConfirmPasswordTextBox= By.xpath("//input[@name='ConfirmPassword']");
+    By RegisterButon         = By.xpath("//button[@name='register-button']");
+    By ContinueButton        = By.xpath("//a[contains(@class,'button-1')]");
 
     public BookPage(WebDriver driver) {
         this.driver = driver;

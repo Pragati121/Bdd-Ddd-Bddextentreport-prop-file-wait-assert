@@ -15,7 +15,6 @@ public class HomePageStepdefinition extends BaseCLass {
         @And("add User details")
         public void addUserDetails() throws IOException {
                 pageFactory.getHomePage().Homemethod();
-                driver.close();
         }
         @When("click on Register then logout")
         public void click_on_register_then_logout() {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.454">
+    <testcase classname="Login Action" name="Add Books" time="15.118">
+        <system-out><![CDATA[Given User is on the Home Page..............................................passed
+When click on Books.........................................................passed
+And add Book................................................................passed
+And go to shopping cart.....................................................passed
+And click on checkout option................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
